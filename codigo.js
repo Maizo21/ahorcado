@@ -37,7 +37,8 @@ function rendirse(e){
 
 function letras(e){
 
-    var letraIngresada = document.getElementById('letra').value;
+    var letraIngreso = document.getElementById('letra').value;
+    var letraIngresada = letraIngreso.toLowerCase()
     e.preventDefault()
     form = document.getElementById("form").reset();
 
