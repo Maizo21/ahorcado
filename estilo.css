@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: rgb(15, 15, 15);
+    color: blanchedalmond;
+}
+
+.container{
+    width: 900px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    min-height: calc(100vh - 50px - 75px);
+
+}
+
+h1{
+    background: linear-gradient(red,gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+aside{
+    float: left;
+    margin-right: 300px;
+}
+
+aside form > label, #letra,button{
+    margin: 5px;
+}
+
+#letra{
+    width: 25px;
+    background: transparent;
+    border-radius: 4px;
+    border:red solid 1px;
+    color: white;
+    text-align: center;
+}
+
+button{
+    border-radius: 4px;
+    padding: 5px;
+    transition: 0.6s;
+    font-weight: bold;
+}
+
+#b1{
+    color: white;
+    background-color:#5EA293;
+}
+
+#b1:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+#b2{
+    color: darkred;
+    background-color: lightgray;
+}
+
+#b2:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.juego{
+    float: right;
+    width: 300px;
+}
+
+
+
+#juego-img-ahorcado{
+    width: 200px;
+}
+
+#juego-respuesta{
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 15px;
+    width: 200px;
+}
+
+.footer{
+    clear: both;
+    color: white;
+    text-align: center;
+    height: 80px;
+    background:rgb(0, 0, 0);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img{
+    width: 40px;
+}
