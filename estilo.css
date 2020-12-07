@@ -7,12 +7,14 @@ body{
 }
 
 .container{
-    width: 900px;
+    width: 90%;
     margin: 0 auto;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    min-height: calc(100vh - 50px - 75px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 160px);
+    place-content: center;
+    place-items: center;
+    gap: 1.6rem;
 
 }
 
@@ -21,17 +23,15 @@ h1{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    font-size: 35px;
+    font-size: 2.5rem;
     letter-spacing: 1px;
+    grid-column: 1/-1;
 }
 
 aside{
-    float: left;
-    margin-right: 300px;
-}
-
-aside form > label, #letra,button{
-    margin: 5px;
+    background-color: black;
+    border-radius: 5px;
+    padding: 8px;
 }
 
 #letra{
@@ -41,6 +41,7 @@ aside form > label, #letra,button{
     border:red solid 1px;
     color: white;
     text-align: center;
+    margin: 15px 0;
 }
 
 button{
@@ -86,21 +87,51 @@ button{
     text-align: center;
     font-size: 15px;
     width: 200px;
+    grid-row: 3;
+    grid-column: 1/-1;
+    place-self: end center;
+
 }
 
-.footer{
-    clear: both;
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 380px));
+    width: 100%;
+    height: 120px;
+    place-content: center;
+    place-items: center;
+    border-radius: 2px;
+    background:rgba(0, 0, 0, 0.16);
     color: white;
-    text-align: center;
-    height: 80px;
-    background:rgb(0, 0, 0);
 }
 
-.logo{
-    display: flex;
-    justify-content: center;
+footer ul{
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1rem;
+    list-style: none;
+    grid-row: 1/-1;
+}
+
+footer li{
+    margin: 10px 0;
+
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    place-content: center;
+    place-items: center;
+}
+
+footer p{
+    grid-column: 2;
+    font-size: 8px;
 }
 
 .logo-img{
     width: 40px;
+    display: flex;
+    margin: 0 auto;
 }

@@ -2,11 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="El ahorcado" content="Trata de adivinar la palabra oculta antes de terminar ahorcado.">
+
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
-    <title>Juego del Ahorcado</title>
+    <title>El Ahorcado</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="/estilos/mobile.css" media="(max-width:500px)">
 </head>
 <body>
     
@@ -14,31 +19,34 @@
     <h1>El Ahorcado</h1>
 
     <aside>
-    <form id="form">
-        <label for="letra">Ingresa una letra</label> <br>
-        <input type="text" id="letra" maxlength="1"> <br>
-        <button id="b1">Prueba</button> <button id="b2">Rendirse</button>
-    </form>
+        <form id="form">
+            <label for="letra">Ingresa una letra</label> <br>
+            <input type="text" id="letra" maxlength="1"> <br>
+            <button id="b1">Prueba</button> <button id="b2">Rendirse</button>
+        </form>
     </aside>
 
-    <section class="juego">
-        <article id="juego-img">
-            
+        <article id="juego-img"> 
         </article>
 
         <article id="juego-respuesta">
-            
         </article>
-    </section>
-
-</div>
-
-<footer class="footer">
-    <p>Hernan Amaiz. 2020</p>
-    <div class="logo">
-        <img src="logo2.png" alt="" class="logo-img">
     </div>
-</footer>
+
+    <footer class="footer">
+        <section>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/hernan-amaiz-367b08103/" target="_blank"> LinkedIn</a></li>
+            <li><a href="https://github.com/Maizo21" target="_blank"> Github </a></li>
+            <li><a href="https://www.instagram.com/maizorito_/" target="_blank"> Instagram </a></li>
+        </ul>
+    </section>
+    <section>
+        <img src="logo2.png" alt="logo" class="logo-img">
+        <p>Hernan Amaiz. 2020</p>
+    </section>
+    </footer>
+
 <script src="codigo.js"></script>    
 </body>
 </html>
