@@ -129,7 +129,7 @@ function adivinar(e){
         confirmButtonText: 'Adivina',
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
-        background: `black`
+        background: `lightgray`
       }).queue([
         {
           title: '¿Cual es la palabra?'
