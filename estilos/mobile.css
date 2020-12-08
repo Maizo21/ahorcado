@@ -35,3 +35,9 @@ button{
 #b3{
     width: 80px
 }
+
+.logo-img{
+    width: 45px;
+    display: flex;
+    margin: 0 auto;
+}
