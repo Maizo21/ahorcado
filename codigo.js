@@ -1,13 +1,14 @@
 let palabras = [
     'tomate', 'clima', 'programa', 'adivinanza', 'espeluznante',
-    'bosque', 'increible', 'computador', 'guitarra', 'aspiradora',
-    'canto', 'poligono', 'licuadora', 'mascarilla', 'murcielago',
+    'bosque', 'imposible', 'computador', 'guitarra', 'aspiradora',
+    'canto', 'figura', 'licuadora', 'mascarilla', 'animal',
     'lluvia', 'mantenimiento', 'longitud', 'espectro', 'esfuerzo',
-    'velocidad', 'volcan', 'victorioso', 'madriguera', 'poderoso',
+    'velocidad', 'utensilios', 'victorioso', 'madriguera', 'poderoso',
     'perfume','teclado','medidas','porcentaje','refrigerador',
-    'paralelepipedos','antibioticos','adaptacion','estimulacion',
-    'funcional','fisico','diagnostico','ligamento','nervios','pantorrilla',
-    'pulcritud'
+    'poliedro','infecciones','paralelogramos','microorganismos',
+    'funcional','movimientos','profesionales','ligamento','nervios','pantorrilla',
+    'pulcritud', 'delicadeza', 'minuciosidad', 'elegancia', 'exquisitez', 'extraordinario', 'comportamiento',
+    'finura', 'equivalente'
 ]
 
 let palabraIncognita = palabras[Math.floor(Math.random()*palabras.length)]
@@ -30,7 +31,7 @@ function rendirse(e){
     })
     .then((value) => {
         if(value.isConfirmed){
-            location.reload();
+            window.location.reload();
         }
     })
 }
@@ -70,7 +71,7 @@ function letras(e){
                     center`})
                 .then((value) => {
                     if(value.isConfirmed){
-                        location.reload();
+                        window.location.reload();;
                     }
                     else{
                         swal.fire({
@@ -85,7 +86,7 @@ function letras(e){
                         .then((value) => {
     
                             if(value.isConfirmed){
-                                location.reload();
+                                window.location.reload();
                             }
                         })
                     }
@@ -112,7 +113,7 @@ function letras(e){
                     .then((value) => {
     
                         if(value.isConfirmed){
-                            location.reload();
+                            window.location.reload();
                         }
                     })
                 }
@@ -129,7 +130,9 @@ function adivinar(e){
         confirmButtonText: 'Adivina',
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
-        background: `lightgray`
+        background: `lightgray`,
+        borderColor:'black'
+
       }).queue([
         {
           title: '¿Cual es la palabra?'
@@ -147,6 +150,13 @@ function adivinar(e){
                 denyButtonColor:'black',
                 confirmButtonText: 'Si',
                 confirmButtonColor: 'black',})
+                .then((value) => {
+    
+                    if(value.isConfirmed){
+                        window.location.reload(); 
+
+                    }
+                })
           }else{
             swal.fire({
                 title:'Game Over!', 
@@ -160,7 +170,8 @@ function adivinar(e){
                 .then((value) => {
     
                     if(value.isConfirmed){
-                        location.reload();
+                        window.location.reload(); 
+
                     }
                 })
           }
