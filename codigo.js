@@ -82,7 +82,12 @@ function letras(e){
                         background: `
                         url('gback.gif')
                         center`})  
-                        
+                        .then((value) => {
+    
+                            if(value.isConfirmed){
+                                location.reload();
+                            }
+                        })
                     }
                 })
             }
@@ -117,6 +122,55 @@ function letras(e){
 
 }
 
+function adivinar(e){
+    e.preventDefault(e)
+    Swal.mixin({
+        input: 'text',
+        confirmButtonText: 'Adivina',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        background: `black`
+      }).queue([
+        {
+          title: '¿Cual es la palabra?'
+        },
+      ]).then((result) => {
+        if (result.value) {
+          var answers = (result.value).join('').toLowerCase()
+          if(answers == palabraIncognita){
+            swal.fire({
+                title:'GANADOR', 
+                text:`La palabra era ${(palabraIncognita)}. ¿Deseas jugar de nuevo?`,
+                width:'400px',
+                showDenyButton: true,
+                denyButtonText:'No',
+                denyButtonColor:'black',
+                confirmButtonText: 'Si',
+                confirmButtonColor: 'black',})
+          }else{
+            swal.fire({
+                title:'Game Over!', 
+                width:'500px',
+                text: `La palabra era '${palabraIncognita}'`,
+                confirmButtonText: 'Ok',
+                confirmButtonColor: 'black',
+                background: `
+                url('gback.gif')
+                center`})
+                .then((value) => {
+    
+                    if(value.isConfirmed){
+                        location.reload();
+                    }
+                })
+          }
+        }
+      })
+
+
+
+}
+
 
 
 for (let i = 0; i < palabraIncognita.length; i++){
@@ -129,3 +183,6 @@ let b2 = document.getElementById('b2')
 b2.addEventListener('click', rendirse)
 let b1 = document.getElementById('b1')
 b1.addEventListener('click', letras)
+
+let b3 = document.getElementById('b3')
+b3.addEventListener('click', adivinar)
