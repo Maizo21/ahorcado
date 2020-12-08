@@ -149,7 +149,6 @@ function adivinar(e){
                 confirmButtonText: 'Si',
                 confirmButtonColor: 'black',})
                 .then((value) => {
-    
                     if(value.isConfirmed){
                         window.location.reload(); 
 
