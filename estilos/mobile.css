@@ -1,0 +1,25 @@
+.container{
+    gap: 0px;
+}
+
+h1{
+    font-size: 1.4rem;
+}
+
+aside{
+    grid-column: 1/-1;
+    grid-row: 4;
+    place-self: start center;
+    font-size: 12px;
+}
+
+#juego-img{
+    grid-column: 1/-1;
+    place-self: center center;
+}
+
+#juego-respuesta{
+    grid-row: 3;
+    place-self: center center;
+  
+}

@@ -71,13 +71,6 @@ button{
     cursor: pointer;
 }
 
-.juego{
-    float: right;
-    width: 300px;
-}
-
-
-
 #juego-img-ahorcado{
     width: 200px;
     grid-row: 2;
